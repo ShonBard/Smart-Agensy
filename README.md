@@ -17,7 +17,7 @@
 
 * Клонировать проект в текущую папку и удалить все лишнее (одна команда)
 ```
-git clone https://github.com/ShonBard/smartAgensy .
+git clone https://github.com/ShonBard/Smart-Agensy .
 ```
 **2. Установить все зависимости  командой** `npm i`
 
