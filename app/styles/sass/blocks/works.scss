@@ -1,0 +1,21 @@
+.works {
+	height: 100%;
+	min-height: 1610px;
+	background-color: $light;
+}
+
+.works-title {
+	margin-top: 130px;
+}
+
+.works-discription {
+	margin-bottom: 110px;
+}
+
+.gallery-item {
+	background-size: cover;
+	cursor: pointer;
+	height: 365px;
+	background-color: $accent;
+	margin: 15px 0;
+}

@@ -1,0 +1,130 @@
+
+
+.overlay-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.288);
+	z-index: 800;
+}
+
+.menu-wrap {
+	background-color: #3c3c3c;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 350px;
+	height: 100vh;
+	padding: 20px 0;
+	transform: translateX(600px);
+	transition: $transition;
+	z-index: 900;
+}
+@include media-breakpoint-down(sm) {
+	.menu-wrap {
+		width: 100%;
+	}
+}  
+.menu-wrap-active {
+	transform: translateX(0px);
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-top: 60px;
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		padding: 10px;
+		font-weight: 700;
+		font-size: 25px;
+		border-top: 1px solid darken($textcolor, 5);
+		transition: $transition;
+		&:hover, :focus, &:active {
+			color: $textcolor;
+			background-color: $accent;
+		}
+	}
+}
+
+.highlight {
+	background: $accent;
+}
+
+.menu-btn {
+	display: block;
+	width: 34px;
+	height: 25px;
+	background-color: #d1caca00;
+	position: relative;
+	&:hover {
+		span,
+		span::before,  
+		span::after {
+			background-color: $accent;
+			transition: $transition;
+		}
+	}
+	span,
+	span::before,  
+	span::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(50% 50%);
+		margin-left: -17px;
+		width: 34px;
+		height: 4px;
+		background-color: #3c3c3c;
+	}
+	span::before,  
+	span::after {
+		content: '';
+		display: block;
+	}
+	span::before {
+		top: -8px;
+	}
+	span::after {
+		top: 8px;
+	}
+}
+
+.menu-arrow {
+	margin: auto;
+}
+.menu-arrow-active {
+	transition: $transition;
+	position: relative;
+	margin-top: 60px;
+	&:hover {
+		transform: scale(1.2);
+	}
+}
+.menu-arrow-active span {
+	background-color: $accent;
+
+}
+.menu-arrow-active span::before {
+	background-color: $accent;
+	left: 38px;
+	top: -9px;
+	transform: rotate(35deg);
+	transform-origin: left;
+	width: 17.2px;
+}
+.menu-arrow-active span::after {
+	background-color: $accent;
+	left: 38px;
+	top: 9px;
+	transform: rotate(-35deg);
+	transform-origin: left;
+	width: 17.2px;
+}
+

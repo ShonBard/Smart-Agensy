@@ -1,0 +1,110 @@
+.header {
+	background-size: cover;
+	background-position: center;
+	padding-top: 80px;
+	position: relative;
+	&::before {
+		content: '';
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(180deg, $light 50%, rgba(0, 255, 0, 0));
+		position: absolute;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.header {
+		padding-top: 20px;
+	}
+}
+
+.top-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	right: 114.5px;
+	left: 114px;
+	height: 50px;
+	position: fixed;
+	z-index: 700;
+}
+@include media-breakpoint-down(sm) {
+	.top-line {
+		right: 20px;
+		left: 20px;
+	}
+}
+
+.logo {
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 38px;
+	user-select: none;
+	color: $textcolor;
+	border: 4px solid rgba(60, 60, 60, 0.75);
+	padding: 0 17px;
+	position: relative;
+	&:hover, :active, :focus {
+		color: $textcolor;
+	}
+	i {
+		font-style: normal;
+		color: $accent;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.logo {
+		font-size: 30px;
+		padding: 0 10px;
+	}
+}
+
+.header-title {
+	margin: 145px 0 50px;
+	position: relative;
+}
+
+.header-discription {
+	width: 100%;
+	max-width: 710px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.form-wrap {
+	padding: 20px 40px;
+	margin-top: 115px;
+	box-shadow: 0 0 57px 0px rgba(0, 0, 0, 0.20);
+	background: #fff;
+	position: relative;
+}
+
+.form-title {
+	margin-bottom: 50px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__input {
+		height: 30px;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #000;
+		margin-bottom: 35px;
+	}
+	&__textarea {
+		height: 85px;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #000;
+		resize: none;
+		margin-bottom: 20px;
+	}
+	&__button {
+		background-color: $accent;
+	}
+}

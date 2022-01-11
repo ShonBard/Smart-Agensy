@@ -1,0 +1,114 @@
+.team {
+	background-color: $light;
+	height: 100%;
+	min-height: 965px;
+}
+
+.team-title {
+	margin-top: 145px;
+}
+
+.team-card {
+	background-size: cover;
+	height: 445px;
+	margin-top: 130px;
+	position: relative;
+	&:hover {
+		box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.11);
+		.box-team {
+			visibility: visible;
+		}
+		.nameplate {
+			bottom: 20px;
+			background-color: #FFF3F0;
+			height: 100px;
+			&__position {
+				font-weight: 300;
+				font-size: 17px;
+				color: $accent;
+			}
+			.team-soc-wrap {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+
+.box-team {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFF3F0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	visibility: hidden;
+}
+
+.progress-bar {
+	margin: 0 0 10px 0;
+	&:last-child {
+		margin: 0;
+	}
+	&__name {
+		display: block;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 600;
+		line-height: 1;
+		font-size: 11px;
+		padding: 0;
+	}
+	&__scale{
+		-webkit-appearance: none;
+		height: 4px;
+		min-width: 150px;
+		border-radius: 10px;
+		overflow: hidden;
+		&::-webkit-progress-bar {
+		background-color: #707070;
+		}
+		&::-webkit-progress-value {
+			background-color: $accent;
+		}
+	}
+}
+
+.nameplate {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	width: 260px;
+	height: 95px;
+	position: absolute;
+	bottom: -25px;
+	right: 50%;
+	transform: translate(50% 0);
+	&__name {
+		font-weight: 600;
+		font-size: 30px;
+	}
+	&__position {
+		font-weight: 300;
+	}
+}
+.team-soc-wrap {
+	display: none;
+
+}
+.team-soc-wrap__icon {
+	margin: 0 2px;
+}
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+// __________USER VARIABLES SECTION__________
+
+//__________Color__________
+$accent: #FF5C36
+$light: #F5F5F5
+$dark: #333
+
+$transition: .25s ease-out
+$radius: 27px
+
+//__________Fonts__________
+$fontsize: 16px 
+$textcolor: #535353 
+$lineheight: 1.65
+$text_f: open-sans-osf1, sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif 
+
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+// _________________________Option: Include parts of Bootstrap_________________________ 
+// 1. СНАЧАЛА ВКЛЮЧИТЕ ФУНКЦИИ (ЧТОБЫ ВЫ МОГЛИ МАНИПУЛИРОВАТЬ ЦВЕТАМИ, SVG ВЫЧИСЛЕНИЕМ И Т. Д.)
+// 2. ВКЛЮЧИТЕ СЮДА ЛЮБЫЕ ПЕРЕОПРЕДЕЛЕНИЯ ПЕРЕМЕННЫХ ПО УМОЛЧАНИЮ
+// 3. ВКЛЮЧИТЕ ОСТАВШУЮСЯ ЧАСТЬ НЕОБХОДИМЫХ ТАБЛИЦ СТИЛЕЙ Bootstrap
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// 4. ВКЛЮЧИТЕ ЛЮБЫЕ НЕОБЯЗАТЕЛЬНЫЕ КОМПОНЕНТЫ Bootstrap, КАК ВАМ НРАВИТСЯ
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// 5. ДОБАВЬТЕ СЮДА ДОПОЛНИТЕЛЬНЫЙ ПОЛЬЗОВАТЕЛЬСКИЙ КОД
+@import 'node_modules/swiper/swiper-bundle.min'
+
+// __________FONTS LOAD SECTION__________
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('open-sans-osf1', normal, 300, '../fonts/open-sans/open-sans-300.woff2')  
+@include font('open-sans-osf1', normal, 400, '../fonts/open-sans/open-sans-400.woff2')  
+@include font('open-sans-osf1', normal, 600, '../fonts/open-sans/open-sans-600.woff2')  
+
+@include font('source-sans-ssf2', italic, 400, '../fonts/source-sans/source-sans-italic.woff2')	
+@include font('source-sans-ssf2', normal, 600, '../fonts/source-sans/source-sans-600.woff2')
+
+
+// __________GENERAL DOCUMENT STYLES__________
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: #f00
+	&:required:valid
+		border-color: #0f0
+
+body
+	font-family: $text_f
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
