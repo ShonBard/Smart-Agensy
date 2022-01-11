@@ -13,7 +13,7 @@
  * **_breakpoints.scss** - миксин точек останова Bootstrap
 
 ## Как ознакомиться с данным проектом 
-**1. Клонировать или [загрузить](https://github.com/ShonBard/amartAgency/archive/refs/heads/master.zip) проект с GitHub**
+**1. Клонировать или [загрузить](https://github.com/ShonBard/Smart-Agensy/archive/refs/heads/master.zip) проект с GitHub**
 
 * Клонировать проект в текущую папку и удалить все лишнее (одна команда)
 ```
